@@ -8,8 +8,11 @@ export const FrontPage = (props) => {
     return (
         <div className="FrontPage container body-content">
             <Header />
-            <FrontPageJumbo />
-            <FrontPageImage urlSrc="/Images/trophyheads.jpg" altText="trophyheads" />
+            <FrontPageJumbo eventName="The 300th Annual" 
+                            tournamentName="KC Classic" 
+                            tournamentDescription="This is a brief description of the KC Classic" 
+                            eventDescription="Here is some detail about this specific tournament event" />
+            <FrontPageImage urlSrc={"/resources/" + props.tournamentId + "/frontPageImage.jpg"} altText="Front Page Image" />
             <FrontPageSubArea />
         </div>
     );
