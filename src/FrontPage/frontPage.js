@@ -6,7 +6,7 @@ import {Header} from '../header';
 
 export const FrontPage = (props) => {
     return (
-        <div className="FrontPage container body-content">
+        <div className="frontPage container body-content">
             <Header />
             <FrontPageJumbo eventName="The 300th Annual" 
                             tournamentName="KC Classic" 
