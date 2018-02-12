@@ -1,15 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, browserHistory } from 'react-router';
+import ReactDom from 'react-dom';
+import { Router } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import routes from './routes';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDom.render(<App />, document.getElementById('root'));
+
 registerServiceWorker();
 
-ReactDom.render(
-    <Router history={browserHistory} routes={routes} />,
-    document.querySelector('#app')
-  );
+// ReactDom.render(
+//     <Router  routes={routes}>
+
+//     </Router>
+//     //document.querySelector('#app')
+//   );
