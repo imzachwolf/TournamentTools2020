@@ -3,7 +3,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import App from './App';
 import {FrontPage} from './FrontPage/frontPage';
-import {RegistrationWizard} from './Registration/registrationWizard';
+import RegistrationWizard from './Registration/registrationWizard';
 import {CartWizard} from './Cart/cartWizard';
 export default (
   <Route path='/' component={App}>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
  import {FrontPage} from './FrontPage/frontPage';
 import './content/bootstrap.css';
 import './content/site.css';
-import {RegistrationWizard} from "./Registration/registrationWizard";
+import RegistrationWizard from "./Registration/registrationWizard";
 
 
 class App extends Component {
