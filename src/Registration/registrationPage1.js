@@ -1,7 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import validate from './validate' ;
-import renderField from './renderField';
+import RenderField from './renderField';
 import FieldModel from './fieldModel';
 
 
@@ -31,7 +31,7 @@ export const RegistrationPage1 = props => {
             key={"mykey" + index.toString()}
             name={f.name}
             type={f.type}
-            component={renderField}
+            component={RenderField}
             label={f.label}
         /> );
 

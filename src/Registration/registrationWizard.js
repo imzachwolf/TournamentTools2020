@@ -3,9 +3,10 @@ import {Header} from '../header';
 import RegistrationPage1 from './registrationPage1';
 import {Provider} from "react-redux";
 import store from "./store"
+import PropTypes from 'prop-types';
 import RegistrationPage2 from "./registrationPage2";
 
-class registrationWizard extends Component{
+class RegistrationWizard extends Component{
 
     constructor(props) {
         super(props);
@@ -33,8 +34,8 @@ class registrationWizard extends Component{
             <div className="registration container body-content">
 
                 {/*<Header />*/}
-                {page === 1 && <RegistrationPage1 onSubmit={this.nextPage()}/>}
-                {/*{page === 2 && <RegistrationPage2 previousPage={this.previousPage} onSubmit={this.nextPage}/>}*/}
+                {page === 1 && <RegistrationPage1 onSubmit={this.nextPage}/>}
+                {page === 2 && <RegistrationPage2 previousPage={this.previousPage} onSubmit={onSubmit}/>}
 
 
             </div>
@@ -44,8 +45,8 @@ class registrationWizard extends Component{
 
 }
 
-// RegistrationWizard.propTypes = {
-//     onSubmit: PropTypes.func.isRequired,
-// };
+RegistrationWizard.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+};
 
-export default  registrationWizard;
+export default  RegistrationWizard;
