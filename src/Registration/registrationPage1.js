@@ -11,13 +11,13 @@ export const RegistrationPage1 = props => {
 //will be pushed in order of render
     let fields = [];
     // fields.push(new FieldModel('firstName', 'text', renderField, 'First Name'));
-    fields.push(new FieldModel('firstName', 'text',  'First Name'));
-    fields.push(new FieldModel('lastName', 'text', 'Last Name'));
-    fields.push(new FieldModel('address1', 'text', 'Address 1'));
-    fields.push(new FieldModel('address2', 'text', 'Address 2'));
-    fields.push(new FieldModel('city', 'text', 'City'));
-    fields.push(new FieldModel('stateOrProvince', 'text', 'State/Province'));
-    fields.push(new FieldModel('zipOrPostalCode', 'text', 'Zip/Postal Code'));
+    fields.push(new FieldModel('firstName', 'text',        RenderField, 'First Name'));
+    fields.push(new FieldModel('lastName', 'text',         RenderField, 'Last Name'));
+    fields.push(new FieldModel('address1', 'text',         RenderField, 'Address 1'));
+    fields.push(new FieldModel('address2', 'text',         RenderField,  'Address 2'));
+    fields.push(new FieldModel('city', 'text',             RenderField,  'City'));
+    fields.push(new FieldModel('stateOrProvince', 'text',  RenderField, 'State/Province'));
+    fields.push(new FieldModel('zipOrPostalCode', 'text',  RenderField, 'Zip/Postal Code'));
 
 
 
@@ -31,7 +31,7 @@ export const RegistrationPage1 = props => {
             key={"mykey" + index.toString()}
             name={f.name}
             type={f.type}
-            component={RenderField}
+            component={f.component}
             label={f.label}
         /> );
 
