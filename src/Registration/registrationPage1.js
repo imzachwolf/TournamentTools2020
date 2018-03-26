@@ -37,7 +37,9 @@ export const RegistrationPage1 = props => {
 
     // const {handleSubmit} = props;
     return (
+
         <form onSubmit={handleSubmit}>
+            <h1>Name/Address</h1>
             {fields}
 
 

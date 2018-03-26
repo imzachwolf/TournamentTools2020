@@ -5,6 +5,8 @@ import {Provider} from "react-redux";
 import store from "./store"
 import PropTypes from 'prop-types';
 import RegistrationPage2 from "./registrationPage2";
+import RegistrationPage3 from "./registrationPage3";
+import RegistrationPage4 from "./registrationPage4";
 
 class RegistrationWizard extends Component{
 
@@ -14,6 +16,8 @@ class RegistrationWizard extends Component{
         this.previousPage = this.previousPage.bind(this);
         this.state = {
             page: 1,
+            country: '',
+            region: ''
         };
     }
 
@@ -35,7 +39,9 @@ class RegistrationWizard extends Component{
 
                 {/*<Header />*/}
                 {page === 1 && <RegistrationPage1 onSubmit={this.nextPage}/>}
-                {page === 2 && <RegistrationPage2 previousPage={this.previousPage} onSubmit={onSubmit}/>}
+                {page === 2 && <RegistrationPage2 previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+                {page === 3 && <RegistrationPage3 previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+                {page === 4 && <RegistrationPage4 previousPage={this.previousPage} onSubmit={onSubmit}/>}
 
 
             </div>
